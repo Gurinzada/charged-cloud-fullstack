@@ -1,7 +1,9 @@
 export default function Client(){
     return(
         <div>
-            ola
+            <main>
+                Fodasse
+            </main>
         </div>
     )
 }

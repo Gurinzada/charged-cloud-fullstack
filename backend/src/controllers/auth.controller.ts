@@ -14,6 +14,7 @@ export class AuthController {
   @UseGuards(AuthGuard('google'))
   googleCallback(@Req() req, @Res() res:Response) {
     // Retorna o usuário autenticado
-    res.redirect(`http://localhost:5173/`)
+    const googleId = req.user.googleId
+    res.redirect(`http://localhost:5173/loading?userid=${googleId}`)
   }
 }
