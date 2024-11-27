@@ -4,10 +4,11 @@ import DarkMode from "../components/Darkmode"
 import styles from "../styles/auth.module.scss"
 import { useMode } from "../hooks/useMode"
 
+
 export default function Auth(){
 
-
     const {mode} = useMode()
+    
 
     // useEffect(() => {
     //     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -37,7 +38,7 @@ export default function Auth(){
                         <h1 className={styles.Title} style={{paddingTop:'0.75rem'}}>Sign in</h1>
                     </div>
                     <GoogleButton
-                        onClick={() => { console.log('Google button clicked') }}
+                        onClick={() => window.location.href = 'http://localhost:3000/auth/google'}
                     />
                 </div>
                 <div>
