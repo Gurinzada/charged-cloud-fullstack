@@ -36,14 +36,14 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .RightPart{
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Title{
@@ -55,4 +55,153 @@
     font-size: 0.85rem;
     font-weight: 500;
 
+}
+
+.AreaLogin{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.InputArea{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    position: relative;
+}
+
+.Input{
+    border: 1px solid #303030;
+    border-radius: 6px;
+    height: 1.8rem;
+    padding-left: 0.25rem;
+    width: 15rem;
+}
+
+@keyframes goUpper {
+    from{
+        font-size: 0.75rem;
+        font-weight: 300;
+        transform: translateY(0);
+    }
+    to{
+        font-size: 0.8rem;
+        font-weight: 500;
+        transform: translateY(-3.35vh);
+    }
+
+}
+
+.Label{
+    font-size: 0.75rem;
+    font-weight: 300;
+    padding-left: 0.25rem;
+    position: absolute;
+}
+
+.LabelFocus{
+    animation: goUpper 1s ease forwards;
+}
+
+.Bnt{
+    border-radius: 6px;
+    background-color: #437de7;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    height: 1.8rem;
+    transition: 0.5s ease;
+    width: 15rem;
+}
+
+.Bnt:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media (max-width: 1024px) {
+    .Forms{
+        gap: 2.5rem;
+        padding: 1rem;
+    }
+    .IconGoogle{
+        width: 7.5rem;
+    }
+    .Title{
+        font-size: 1.2rem;
+    }
+    .Bnt, .Input{
+        height: 1.4rem;
+        width: 9rem;
+    }
+    .Rigths, .Option, .Label{
+        font-size: 0.65rem;
+    }
+    .RightPart{
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Title{
+        font-size: 0.95rem;
+    }
+    .Rigths, .Option, .Label{
+        font-size: 0.5rem;
+    }
+    .IconGoogle{
+        width: 4.5rem;
+    }
+    .Bnt, .Input{
+        height: 1.2rem;
+        width: 7rem;
+    }
+    .Bnt{
+        font-size: 0.65rem;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    @keyframes goUpper {
+        from{
+            font-size: 0.45rem;
+            font-weight: 300;
+            transform: translateY(0);
+        }
+        to{
+            font-size: 0.5rem;
+            font-weight: 500;
+            transform: translateY(-3.35vh);
+        }
+    }
+    .Title{
+        font-size: 0.65rem;
+    }
+    .Label{
+        font-size: 0.45rem;
+    }
+    .IconGoogle{
+        width: 2rem;
+    }
+    .Bnt, .Input{
+        height: 1rem;
+        width: 5rem;
+    }
+    .Bnt{
+        font-size: 0.5rem;
+    }
+    .Forms{
+        padding: 0.2rem;
+    }
+    .LeftPart{
+        justify-content: space-between;
+    }
+    .Rigths, .Option{
+        font-size: 0.35rem;
+        font-weight: 800;
+    }
 }

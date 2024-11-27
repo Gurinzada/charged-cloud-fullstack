@@ -1,25 +1,19 @@
 import googleLogo from "../assets/googleLogo.jpg"
-import GoogleButton from 'react-google-button'
 import DarkMode from "../components/Darkmode"
 import styles from "../styles/auth.module.scss"
 import { useMode } from "../hooks/useMode"
+import useLabel from "../hooks/useLabel"
 
 
 export default function Auth(){
-
+    const {animateLabel, handleFocus} = useLabel()
     const {mode} = useMode()
-    
 
-    // useEffect(() => {
-    //     const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const handleRegister = (e:React.FormEvent) => {
+        e.preventDefault()
+        window.location.href = ('http://localhost:3000/auth/google')
 
-    //     if (prefersDarkMode) {
-    //     console.log("O usuário prefere o modo escuro.");
-    //     } else {
-    //     console.log("O usuário prefere o modo claro.");
-    //     }
-
-    // },[mode])
+    }
 
     return(
         <main style={mode ? {backgroundColor: "#303030", transition: "2s ease"} : {backgroundColor:"#fff", transition: "2s ease"} } className={styles.MainArea}>
@@ -35,11 +29,21 @@ export default function Auth(){
                 </div>
                 <div className={styles.RightPart}>
                     <div>
-                        <h1 className={styles.Title} style={{paddingTop:'0.75rem'}}>Sign in</h1>
+                        <h1 className={styles.Title}>Login</h1>
                     </div>
-                    <GoogleButton
-                        onClick={() => window.location.href = 'http://localhost:3000/auth/google'}
-                    />
+                    <form className={styles.AreaLogin}>
+                        <div className={styles.InputArea}>
+                            <label className={`${styles.Label} ${animateLabel ? styles.LabelFocus : null}`} htmlFor="email">Email</label>
+                            <input id="email" className={styles.Input} type="email" onFocus={handleFocus}/>
+                        </div>
+                        <div>
+                            <button className={styles.Bnt}>Login</button>
+                        </div>
+                    </form>
+                    <div>
+                        <span className={styles.Option}>OU</span>
+                    </div>
+                    <button onClick={handleRegister} className={styles.Bnt}>Faça seu cadastro</button>
                 </div>
                 <div>
                     <span className={styles.Rigths}>Todos os direitos reservados a © Cloud Enterprises - 2024</span>
