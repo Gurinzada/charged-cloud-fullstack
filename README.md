@@ -6,6 +6,8 @@
 
 ## Checklist de Tarefas
 
+### Progresso : 30.75%
+
 1. Backend
 - [x] Autenticação de Usuário (Via Google).
 - [ ] CRUD de Empresas.
@@ -24,6 +26,8 @@
 3. Banco de Dados
 - [ ] Modelar a tabela de empresas com campos relevantes (exemplo: ID, nome, endereço, telefone, etc.).
 - [ ] Utilizar práticas adequadas de modelagem e normalização.
+
+
 
 
 ## Imagens Aplicação
