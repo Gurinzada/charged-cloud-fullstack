@@ -31,15 +31,15 @@
 
 
 ## Imagens Aplicação
-![Tela Login](./assetsforread/screenAuth.png)
 
-![Tela Login Black Screen](./assetsforread/blackScreenAuth.png)
 
 ## Como utilizar o serviço do Google
 
 ## Como usar
 
-## Tecnologias Utilizadas e Justificativas
+## Tecnologias Utilizadas e Justificativas Tecnicas
+
+- Adicionei uma tabela de usuários para persistir os dados básicos retornados pela autenticação do Google. Isso permite gerenciar melhor os usuários autenticados e preparar a aplicação para futuras expansões, como controle de permissões ou suporte a outros métodos de autenticação.
 
 ## Autor
 - Augusto Mariano
