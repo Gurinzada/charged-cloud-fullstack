@@ -1,0 +1,13 @@
+.Container {
+    animation: goInScreen 2s forwards ease;
+    transition: background-color 2s ease, color 2s ease;
+    &.darkmode {
+      background-color: #303030;
+      color: #ffffff; 
+    }
+  
+    &.lightmode {
+      background-color: #fff;
+      color: #000;
+    }
+  }

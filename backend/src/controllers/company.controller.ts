@@ -45,9 +45,10 @@ export default class CompanyController{
 
     @HttpCode(200)
     @Get('/:id')
-    async getACompany(@Param('id') id:number){
+    async getACompany(@Param('id') id:number, @Req() req:Request){
         try {
-            const response = await this.companyservice.getACompany(Number(id))
+            const userid = Number(req['key'].userid)
+            const response = await this.companyservice.getACompany(Number(id), userid)
             if(response){
                 return response
             }

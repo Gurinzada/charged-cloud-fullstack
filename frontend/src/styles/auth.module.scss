@@ -1,11 +1,4 @@
-@keyframes goInScreen {
-    from{
-        transform: translateX(-100vw);
-    }
-    to{
-        transform: translateX(0vw);
-    }
-}
+@import "./animation.scss";
 
 .MainArea{
     animation: goInScreen 2s forwards ease;

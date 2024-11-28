@@ -55,11 +55,18 @@ export default class CompanyService{
         }
     }
 
-    async getACompany(id:number):Promise<company | null>{
+    async getACompany(id:number, userid:number):Promise<company | null>{
         try {
-            const response = await this.prisma.company.findUnique({
+            const response = await this.prisma.company.findFirst({
                 where:{
-                    id
+                    AND:[
+                        {
+                            id
+                        },
+                        {
+                            userid
+                        }
+                    ]
                 }
             })
             if(response){

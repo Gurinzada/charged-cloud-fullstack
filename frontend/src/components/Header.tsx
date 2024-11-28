@@ -47,7 +47,7 @@ export default function Header(){
                     <Link className={styles.Link} to={"/client"}>Home</Link>
                 </div>
                 <div>
-                    <Link className={styles.Link} to={"/companies"}>Cadastrar empresa</Link>
+                    <Link className={styles.Link} to={"/createcompany"}>Cadastrar empresa</Link>
                 </div>
                 <picture onClick={handleLogout}>
                     <LogoutIcon className={styles.IteractiveIcon} sx={{color:"#d40047", cursor:'pointer'}}/>

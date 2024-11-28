@@ -4,6 +4,7 @@ import { ModeContextProvider } from "./hooks/useMode";
 import Load from "./pages/Load";
 import Client from "./pages/Client";
 import PrivateRoute from "./hooks/PrivateRoute";
+import Company from "./pages/Company";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
     {
         path: "/client",
         element: <ModeContextProvider><PrivateRoute><Client/></PrivateRoute></ModeContextProvider>
+    },
+    {
+        path:"/createcompany",
+        element: <ModeContextProvider><PrivateRoute><Company/></PrivateRoute></ModeContextProvider>
     }
 ])
 
