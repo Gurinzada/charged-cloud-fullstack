@@ -12,6 +12,6 @@ import UserService from "src/services/user.service";
 })
 export default class UserModule implements NestModule{
     configure(consumer: MiddlewareConsumer) {
-        consumer.apply(TokenService).forRoutes({path: "/user/*", method: RequestMethod.ALL})
+        consumer.apply(TokenService).forRoutes({path: "/users/*", method: RequestMethod.ALL})
     }
 }

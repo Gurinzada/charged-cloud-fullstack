@@ -18,7 +18,7 @@ export default function Header(){
         const token = localStorage.getItem('token')
         if(!token) return navigate(0)
         
-        const response = await api.post('/user/logout', {
+        const response = await api.post('/users/logout', {
 
         }, {
             headers:{

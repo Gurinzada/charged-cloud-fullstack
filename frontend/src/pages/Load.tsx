@@ -9,10 +9,11 @@ export default function Load(){
 
     useEffect(() => {
         const handleMyId = async() => {
-            const token = searchParams.get("userid")
+            try {
+                const token = searchParams.get("userid")
             if (token) {
                 localStorage.setItem("token", token)
-                const response = await api.post('/user/checkuser', {   
+                const response = await api.post('/users/validate', {   
                 }, {
                     headers:{
                         "Content-Type": "Application/json",
@@ -22,10 +23,11 @@ export default function Load(){
                 if(response.status === 200 && response.data.userChecked){
                    return  navigate('/client')
                 }
-                localStorage.removeItem("token")
-                return navigate('/') 
             }
-            return navigate('/')
+            } catch {
+                localStorage.removeItem('token')
+                navigate('/')
+            }
         }
         handleMyId()
     }, [searchParams])

@@ -1,14 +1,14 @@
 import { Controller, Get, HttpCode, Post, Req, Res } from '@nestjs/common';
-import { Response } from 'express';
+import { Request, Response } from 'express';
 import UserService from 'src/services/user.service';
 
-@Controller('/user/')
+@Controller('/users/')
 export default class UserController {
   constructor(private readonly userService: UserService) {}
 
   @HttpCode(200)
-  @Post('checkuser')
-  async validateUser(@Req() req, @Res() res: Response) {
+  @Post('validate')
+  async validateUser(@Req() req:Request, @Res() res: Response) {
     try {
       const googleId = req['key'].googleId
       const id = req['key'].userid
@@ -20,13 +20,13 @@ export default class UserController {
 
       return res.status(404).json({ userChecked: false, message: 'User not found' })
     } catch (error) {
-      return res.status(500).json({ userChecked: false, message: error.message })
+      return res.status(500).json({ userChecked: false, message: error})
     }
   }
 
   @HttpCode(200)
-  @Get('getuserinfo')
-  async getUserInfos(@Req() req, @Res() res: Response) {
+  @Get('info')
+  async getUserInfos(@Req() req:Request, @Res() res: Response) {
     try {
       const id = req['key'].userid;
 
@@ -44,7 +44,7 @@ export default class UserController {
 
   @HttpCode(200)
   @Post('logout')
-  async logout(@Req() req, @Res() res: Response) {
+  async logout(@Req() req:Request, @Res() res: Response) {
     try {
       const id = req['key'].userid
 

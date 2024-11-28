@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable, NestMiddleware } from "@nestjs/common";
+import { Injectable, NestMiddleware } from "@nestjs/common";
 import { Request, Response } from "express";
 import * as jwt from "jsonwebtoken"
 import * as dotenv from "dotenv"

@@ -17,7 +17,7 @@ export default function GetUserData(){
         const token = localStorage.getItem('token')
         if(!token) return navigate('/')
         
-        const response = await api.get('/user/getuserinfo', {
+        const response = await api.get('/users/info', {
             headers:{
                 "Content-Type": "Application/json",
                 "Authorization": `Bearer ${token}`

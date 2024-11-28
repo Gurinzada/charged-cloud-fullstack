@@ -19,10 +19,10 @@ model User{
   email String @unique
   firstName String
   picture String
-  companies Comapnies[]
+  companies Company[]
 }
 
-model Comapnies{
+model Company{
   id Int @id @default(autoincrement())
   name String
   address String

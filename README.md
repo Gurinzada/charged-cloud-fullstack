@@ -9,22 +9,22 @@
 ### Progresso : 30.75%
 
 1. Backend
-- [x] Autenticação de Usuário (Via Google).
-- [ ] CRUD de Empresas.
-- [ ] Desenvolver uma API RESTful utilizando Nest.js
-- [ ] Implementar endpoints para as operações de criação, leitura, atualização e exclusão de empresas.
+- [X] Autenticação de Usuário (Via Google).
+- [X] CRUD de Empresas.
+- [X] Desenvolver uma API RESTful utilizando Nest.js
+- [X] Implementar endpoints para as operações de criação, leitura, atualização e exclusão de empresas.
 - [x] Conectar a API a um banco de dados MySQL para persistência dos dados.
 
 2. Frontend
-- [x] Utilizar Vite como ferramenta de build para o projeto frontend.
-- [x] Login com autenticação via Google
+- [X] Utilizar Vite como ferramenta de build para o projeto frontend.
+- [X] Login com autenticação via Google
 - [ ] Visualização da lista de empresas.
 - [ ] Formulários para criação e edição de empresas.
 - [ ] Funcionalidade para exclusão de empresas.
-- [x] Garantir uma interface responsiva e amigável ao usuário.
+- [X] Garantir uma interface responsiva e amigável ao usuário.
 
 3. Banco de Dados
-- [ ] Modelar a tabela de empresas com campos relevantes (exemplo: ID, nome, endereço, telefone, etc.).
+- [X] Modelar a tabela de empresas com campos relevantes (exemplo: ID, nome, endereço, telefone, etc.).
 - [ ] Utilizar práticas adequadas de modelagem e normalização.
 
 
