@@ -9,9 +9,9 @@ export default function Load(){
 
     useEffect(() => {
         const handleMyId = async() => {
-            const token = searchParams.get("userid");
+            const token = searchParams.get("userid")
             if (token) {
-                localStorage.setItem("token", token);
+                localStorage.setItem("token", token)
                 const response = await api.post('/user/checkuser', {   
                 }, {
                     headers:{
@@ -28,7 +28,8 @@ export default function Load(){
             return navigate('/')
         }
         handleMyId()
-    }, [searchParams]);
+    }, [searchParams])
+
     return(
         <picture style={{height:"100vh"}}>
             <img src={loadGif} alt="" style={{height:"100vh", width:"100%"}}/>

@@ -1,0 +1,82 @@
+.Header{
+    align-items: center;
+    background-color: #303030;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2.5rem;
+}
+
+.AreaName{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Navbar{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.Link{
+    color: #437de7;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.Link:hover{
+    color: #5d96ff;
+    font-size: 1.16rem;
+    text-decoration: underline;
+}
+
+.IteractiveIcon{
+    transition: 1s ease;
+}
+
+.IteractiveIcon:hover{
+    transform: scale(1.05);
+}
+
+.Title{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .Header{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .Title{
+        font-size: 1.2rem
+    }
+    .Link{
+        font-size: 0.85rem;
+    }
+    .Link:hover{
+        font-size: 0.95rem
+    }
+}
+
+@media (max-width:425px) {
+    .Title{
+        font-size: 1rem
+    }
+    .Link{
+        font-size: 0.7rem;
+    }
+    .Link:hover{
+        font-size: 0.8rem
+    }
+    .Navbar{
+        gap: 0.8rem;
+        flex-direction: column;
+    }
+}

@@ -30,15 +30,15 @@ export default class UserController {
     try {
       const id = req['key'].userid;
 
-      const userInfo = await this.userService.getUserInfo(Number(id));
+      const userInfo = await this.userService.getUserInfo(Number(id))
 
       if (userInfo) {
-        return res.json({ userInfo });
+        return res.json(userInfo)
       }
 
       return res.status(404).json({ message: 'User not found' })
     } catch (error) {
-      return res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message })
     }
   }
 

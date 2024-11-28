@@ -19,8 +19,18 @@ model User{
   email String @unique
   firstName String
   picture String
+  companies Comapnies[]
 }
 
 model Comapnies{
   id Int @id @default(autoincrement())
+  name String
+  address String
+  email String @unique
+  description String?
+  cnpj String @unique
+  category String
+  website String?
+  user User @relation(fields: [userid], references: [id], onDelete: Cascade)
+  userid Int
 }

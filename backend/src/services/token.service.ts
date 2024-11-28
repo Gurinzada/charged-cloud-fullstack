@@ -7,9 +7,7 @@ dotenv.config()
 @Injectable()
 export class TokenService implements NestMiddleware{
     use(req: Request, res: Response, next: (error?: Error | any) => void) {
-        console.log('Executando Middleware!')
         const token = req.headers['authorization']?.split(' ')[1]
-        console.log(token)
 
         if(!token){
           res.redirect('http://localhost:5173/')

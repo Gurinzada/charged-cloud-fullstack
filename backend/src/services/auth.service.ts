@@ -6,7 +6,6 @@ export class AuthService {
   constructor(private readonly prisma: PrismaService) {}
 
   async validateUser(profile: any) {
-    console.log(profile)
     const { id, displayName, emails, photos } = profile;
     const email = emails[0]?.value;
     const photoUrl = photos[0].value
