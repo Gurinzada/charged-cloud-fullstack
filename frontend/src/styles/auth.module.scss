@@ -40,10 +40,8 @@
 }
 
 .RightPart{
-    align-items: center;
+    align-items: flex-end;
     display: flex;
-    flex-direction: column;
-    gap: 3.2rem;
     justify-content: center;
 }
 
@@ -125,11 +123,9 @@
         width: 2rem;
     }
     .Bnt{
+        font-size: 0.5rem;
         height: 1rem;
         width: 5rem;
-    }
-    .Bnt{
-        font-size: 0.5rem;
     }
     .Forms{
         padding: 0.2rem;

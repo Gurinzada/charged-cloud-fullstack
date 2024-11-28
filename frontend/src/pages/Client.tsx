@@ -1,9 +1,9 @@
+import Header from "../components/Header";
+
 export default function Client(){
     return(
         <div>
-            <main>
-                Fodasse
-            </main>
+            <Header/>
         </div>
     )
 }

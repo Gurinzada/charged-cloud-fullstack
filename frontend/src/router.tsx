@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/client",
-        element: <PrivateRoute><Client/></PrivateRoute>
+        element: <ModeContextProvider><PrivateRoute><Client/></PrivateRoute></ModeContextProvider>
     }
 ])
 

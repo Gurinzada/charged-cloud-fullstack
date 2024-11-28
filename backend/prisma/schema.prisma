@@ -20,3 +20,7 @@ model User{
   firstName String
   picture String
 }
+
+model Comapnies{
+  id Int @id @default(autoincrement())
+}

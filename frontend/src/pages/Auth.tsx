@@ -26,13 +26,7 @@ export default function Auth(){
                     </picture>
                 </div>
                 <div className={styles.RightPart}>
-                    <div>
-                        <button onClick={handleAuth} className={styles.Bnt}>Login</button>
-                    </div>
-                    <div>
-                        <span className={styles.Option}>OU</span>
-                    </div>
-                    <button onClick={handleAuth} className={styles.Bnt}>Faça seu cadastro</button>
+                    <button onClick={handleAuth} className={styles.Bnt}>Sign in</button>
                 </div>
                 <div>
                     <span className={styles.Rigths}>Todos os direitos reservados a © Cloud Enterprises - 2024</span>
