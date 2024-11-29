@@ -35,7 +35,8 @@ export default class CompanyService{
             if(response){
                 return response
             }
-        } catch {
+        } catch(error) {
+            console.log(error)
             throw new Error ("Failed to create company")
         }
     }

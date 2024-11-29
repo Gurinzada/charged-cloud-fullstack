@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsOptional, IsString, Matches } from "class-validator"
+import { IsEmail, IsNotEmpty, IsOptional, IsString, Matches } from "class-validator"
 
 export class CreateCompanyDTO{
     @IsNotEmpty()
@@ -10,6 +10,7 @@ export class CreateCompanyDTO{
     address:string
 
     @IsNotEmpty()
+    @IsEmail()
     @IsString()
     email:string
 

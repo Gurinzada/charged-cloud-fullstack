@@ -2,6 +2,9 @@
 
 .Container {
     animation: goInScreen 2s forwards ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
     transition: background-color 2s ease, color 2s ease;
     &.darkmode {
       background-color: #303030;
@@ -29,5 +32,28 @@
   width: 30rem;
 }
 
+
+
+
+@media (max-width: 1440px) {
+  .Input{
+    width: 20rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .Input{
+    width: 15rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .Input{
+    width: 10rem;
+  }
+  .Input::placeholder{
+    font-size: 0.65rem;
+  }
+}
 
 

@@ -4,7 +4,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    padding: 1rem;
 }
 
 .ComapnyForm{
@@ -24,12 +24,12 @@
     justify-content: center;
 }
 
-.AreaInput{
-  position: relative;
+.Label{
+  padding-left: 0.1rem;
 }
 
-.LabelSelect, .Label{
-  padding-left: 0.1rem;
+.TitleForm{
+  text-align: center;
 }
 
 .AreaBnt{
@@ -41,14 +41,44 @@
 
 .Bnt{
   background-color: #d40047;
-  border: 1px solid #000;
-  cursor: pointer;
+  border: none;
   border-radius: 8px;
+  cursor: pointer;
   color: #efefef;
   height: 1.4rem;
   width: 15rem;
 }
 
+
 .Anime{
   animation: BntAnimation 1s forwards ease;
 }
+
+@media (max-width: 425px) {
+  .Bnt{
+    width: 5rem;
+  }
+  .Label{
+    font-size: 0.75rem;
+  }
+  .TitleForm{
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .AreaBnt{
+    justify-content: flex-start;
+    padding-left: 0.25rem;
+  }
+  .Label{
+    font-size: 0.65rem;
+  }
+  .SelectArea{
+    font-size: 0.65rem;
+  }
+  .TitleForm{
+    font-size: 1.2rem;
+  }
+}
+

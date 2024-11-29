@@ -12,7 +12,9 @@ export default class CompanyController{
     @Post('/')
     async createCompany(@Body() company: CreateCompanyDTO, @Req() req:Request){
         try {
+            console.log(company)
             const userid = Number(req['key'].userid)
+            console.log(userid)
             const response = await this.companyservice.createCompany(company,userid)
             if(response){
                 return response
