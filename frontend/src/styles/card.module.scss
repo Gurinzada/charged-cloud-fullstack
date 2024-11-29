@@ -1,0 +1,104 @@
+@import './animation.scss';
+
+.ContainerCards{
+    align-items: flex-start;
+    border: 1px solid #d40047;
+    border-radius: 6px;
+    background-color: #1b1b1d;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1.5rem;
+    transition: 1s ease;
+    width: 28.165rem;
+}
+
+.ContainerCards:hover{
+    transform: scale(1.05);
+}
+
+.HeaderCard, .AreaInfos{
+    border-bottom: 1px solid #d40047;
+    width: 100%;
+}
+
+.HeaderCard{
+    text-wrap: wrap;
+    text-align: center;
+}
+
+.BodyCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.AreaInfos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.FooterCard{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.AreaOptions{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.Infos, .TextOption{
+    color: #efefef;
+    padding-left: 0.3rem;
+}
+
+.AtributeInfo{
+    color: #437de7;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.Infos{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .ContainerCards{
+        padding: 0.5rem;
+        width: 20rem;
+    }
+    .Infos, .TextOption{
+        font-size: 0.9rem;
+    }
+    .AtributeInfo{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .ContainerCards{
+        padding: 0.25rem;
+        width: 15rem;
+    }
+    .Infos, .TextOption{
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    .AtributeInfo{
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+    
+}

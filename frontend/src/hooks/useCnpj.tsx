@@ -14,7 +14,6 @@ export default function useCnpj(){
         const value = e.target.value;
         setCnpj(value);
 
-        // Validação do CNPJ
         if (value.length >= 14 && !validateCnpj(value)) {
             setCnpjError("CNPJ inválido! Use o formato: 00.000.000/0000-00 ou apenas dígitos.");
         } else {

@@ -17,6 +17,7 @@ type company = {
 
 export default function GetUserCompanies(){
     const [companies, setCompanies] = useState<company[] | null>(null)
+    const [reload, setReload] = useState<boolean>(false)
     const navigate = useNavigate()
 
     const handleUserCompanies = async () => {
@@ -36,5 +37,5 @@ export default function GetUserCompanies(){
             }
     }
 
-    return {companies, handleUserCompanies}
+    return {companies, handleUserCompanies, setReload, reload}
 }

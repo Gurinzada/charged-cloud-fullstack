@@ -77,7 +77,7 @@ export default class CompanyController{
         }
     }
 
-    @HttpCode(204)
+    @HttpCode(200)
     @Delete('/:id')
     async deleteACompany(@Param('id') id:number){
         try {

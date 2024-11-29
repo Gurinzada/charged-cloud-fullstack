@@ -18,7 +18,7 @@
 2. Frontend
 - [X] Utilizar Vite como ferramenta de build para o projeto frontend.
 - [X] Login com autenticação via Google
-- [ ] Visualização da lista de empresas.
+- [X] Visualização da lista de empresas.
 - [ ] Formulários para criação e edição de empresas.
 - [ ] Funcionalidade para exclusão de empresas.
 - [X] Garantir uma interface responsiva e amigável ao usuário.

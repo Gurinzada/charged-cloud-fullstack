@@ -1,0 +1,36 @@
+.MainAreaCars{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.SectionCards{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: flex-start;
+    padding: 2rem 0rem 2rem 6rem;
+}
+
+@media (max-width:1440px) {
+    .SectionCards{
+        justify-content: center;
+        padding: 1rem;
+    }
+}
+
+.Title{
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .Title{
+        font-size: 1.75rem;
+    }
+    .SectionCards{
+        padding: 0.5rem;
+    }
+}
