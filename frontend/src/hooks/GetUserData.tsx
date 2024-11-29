@@ -10,7 +10,7 @@ type user = {
 }
 
 export default function GetUserData(){
-    const [userInfos, setUserInfos] = useState<user | null>()
+    const [userInfos, setUserInfos] = useState<user | null>(null)
     const navigate = useNavigate()
 
     const handleUserInfos = async() => {

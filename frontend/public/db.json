@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "valueText": "Associações Sem Fins Lucrativos",
+        "value": "ASFL"
+    },
+    {
+        "id": 2,
+        "valueText": "Sociedade Empresária Limitada",
+        "value": "LTDA"
+    },
+    {
+        "id": 3,
+        "valueText": "Microempresa",
+        "value": "ME"
+    },
+    {
+        "id": 4,
+        "valueText": "Sociedade Anônima",
+        "value": "SA"
+    },
+    {
+        "id": 5,
+        "valueText": "Sociedade Simples",
+        "value": "SS"
+    }
+]

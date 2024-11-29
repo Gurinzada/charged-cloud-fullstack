@@ -11,6 +11,7 @@ type company = {
     description:string | null,
     userid:number,
     website:string | null
+    id:number
 }
 
 @Injectable()
