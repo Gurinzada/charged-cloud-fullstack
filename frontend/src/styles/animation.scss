@@ -6,3 +6,27 @@
         transform: translateX(0vw);
     }
 }
+
+// @keyframes goOutScreen {
+//     from{
+//         transform: translateX(0vw);
+//     }
+//     to{
+//         transform: translateX(100vw);
+//     }
+// }
+
+@keyframes BntAnimation {
+   0%{
+    transform: translateY(0);
+   }
+   25%{
+    transform: translateY(-2vh);
+   }
+   50%{
+    transform: translateY(1vh);
+   }
+   100%{
+    transform: translateY(0);
+   }
+}

@@ -1,21 +1,5 @@
 @import "./animation.scss";
 
-
-.Container {
-    animation: goInScreen 2s forwards ease;
-    transition: background-color 2s ease, color 2s ease;
-    &.darkmode {
-      background-color: #303030;
-      color: #ffffff; 
-    }
-  
-    &.lightmode {
-      background-color: #fff;
-      color: #000;
-    }
-  }
-  
-
 .MainForm{
     align-items: center;
     display: flex;
@@ -32,10 +16,39 @@
     justify-content: center;
 }
 
-.AreaInput{
+.AreaInput, .AreaSelect{
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.2rem;
     justify-content: center;
+}
+
+.AreaInput{
+  position: relative;
+}
+
+.LabelSelect, .Label{
+  padding-left: 0.1rem;
+}
+
+.AreaBnt{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Bnt{
+  background-color: #d40047;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #efefef;
+  height: 1.4rem;
+  width: 15rem;
+}
+
+.Anime{
+  animation: BntAnimation 1s forwards ease;
 }

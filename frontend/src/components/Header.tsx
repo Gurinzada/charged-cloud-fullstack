@@ -10,6 +10,7 @@ import api from "../services/api";
 export default function Header(){
     const {handleUserInfos, userInfos} = GetUserData()
     const navigate = useNavigate()
+
     useEffect(() => {
        handleUserInfos()
     },[])
