@@ -103,7 +103,7 @@ export default function UpdateCompany(){
         if(response.status === 200){
             toast.success("Empresa Atualizada com sucesso!", {
                 position: "bottom-right",
-                autoClose: 5000,
+                autoClose: 1000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -112,7 +112,9 @@ export default function UpdateCompany(){
                 theme: "dark",
                 transition: Bounce,
             })
-            navigate('/client')
+            setTimeout(() => {
+                navigate('/client')
+            }, 2000)
         }
         } catch {
             return toast.error("Erro ao atualizar empresa! Tente novamente.", {
