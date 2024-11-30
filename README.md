@@ -35,9 +35,37 @@
 
 ## Como utilizar o serviço do Google
 1. Acesse o link `https://console.cloud.google.com` e esteja logado com sua conta Google.
-2. Na guia `Acesso Rápido` clique em `APIs e Serviços`
-![imagem_help](./assetsforread/instructionsGoogle.png)
-3.
+
+2. Clique em `Selecionar um projeto` e em seguida irá abrir uma interface, onde você clicará em `Novo Projeto`.
+![select](./assetsforread/select.png)
+![newproject](./assetsforread/newProject.png)
+
+3. Agora preencha os campos abaixo e clique em `Create`.
+![fields](./assetsforread/fields.png)
+
+4. Confirmando, você irá ser redirecionado para outra página, onde ira aparecer uma notificação que foi realizado com sucesso a criação de seu projeto e para você selecionar este.
+
+5. No menu de navegação, clique e selecione `API's e serviços`.
+![menu](./assetsforread/menu.png)
+
+6. Após isso selecione, `Credenciais` e clique em `Configurar tela de consentimento`.
+![credentials](./assetsforread/credentialsandscreen.png)
+
+7. Na área Tipo de usuário, selecione o seu tipo de usuário, sendo interno para uma organização e externo para testes. Após selecionar clique em `Criar`.
+
+8. Na árae de Informações do aplicativo preencha os campos obrigatorios, como nome do aplicativo, email para suporte do usuário (seu email), e na área de dados de contato do desenvolvedor novamente coloque seu email.
+
+9. Prosseguindo para escopos selecione `Adicionar ou Remover Escopos` e marque `.../auth/userinfo.email` e `.../auth/userinfo.profile` estas duas caixas (Você pode marcar outras de acordo com sua aplicação e necessidade).
+
+10. Na parte de usuário de testes, é opcional adicionar seu email. Assim pode avançar e no final clicar `Voltar ao painel`.
+
+11. Enfim, clique em `Credenciais` e clique em `Criar Credenciais` e selecione `ID do cliente OAuth`.
+
+12. Selecione o tipo de sua aplicação, nesse caso Web.
+
+13. Complete os campos de Nome, e em `Origens JavaScript autorizadas` adicione a URL que hospeda seu aplicativo (`http://localhost:5173`), após preencha `URIs de redirecionamento autorizados` (`http://localhost:3000/auth/google/callback`).
+
+14. Após clicar em criar, copie o `CLIENT ID` e o `CLIENT SECRET` e também copie sua URIs de redirecionamento e configure nas váriaveis ambientes.
 
 ## Como usar
 1. Primeiramente, tenha o node e o npm instalados em sua máquina. Você pode verificar suas versões no terminal de seu computador (node -v e npm -v).
@@ -59,7 +87,7 @@ Certifique-se de configurar as variáveis de ambiente no backend. Um exemplo de 
 DATABASE_URL=mysql://usuario:senha@localhost:3306/chargedcloud
 CLIENT_ID=seu_google_client_id
 CLIENT_SECRET=seu_google_client_secret
-CALLBACK_URL
+CALLBACK_URL=sua_rota_de_redirecionamento_apos_autenticacao
 SECRET=sua_chave_secreta
 ```
 
