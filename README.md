@@ -72,7 +72,7 @@
 
 2. Após fazer o download do projeto, entre nos diretórios frontend e backend e rode o comando npm install para instalar as dependências do projeto.
 
-3. Configure as variáveis de ambiente no arquivo .env disponível no diretório backend, de acordo com seu serviço Google. Também configure a `DATABASE_URL` de acordo com seu banco de dados, como o exemplo abaixo: `mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public`.
+3.Crie um arquivo `.env` na raiz de `Backend` e configure as variáveis de ambiente no arquivo .env, semelhante ao `.env.example` também disponível no diretório backend, de acordo com seu serviço Google. Também configure a `DATABASE_URL` de acordo com seu banco de dados, como o exemplo abaixo: `mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public`.
 
 4. Após configurar, execute o comando `npx prisma migrate dev` para realizar as migrações no seu banco de dados, criando as tabelas e definindo a estrutura.
 
@@ -82,13 +82,14 @@
 
 ### Configuração do Arquivo `.env`
 Certifique-se de configurar as variáveis de ambiente no backend. Um exemplo de configuração:
-
-```env
-DATABASE_URL=mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public.
+`env.example`
+```
+DATABASE_URL="mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public"
+PORT= 3000
 CLIENT_ID=seu_google_client_id
 CLIENT_SECRET=seu_google_client_secret
 CALLBACK_URL=sua_rota_de_redirecionamento_apos_autenticacao
-SECRET=sua_chave_secreta
+SECRET="sua_chave_secreta"
 ```
 
 ## Tecnologias Utilizadas e Justificativas Tecnicas
