@@ -1,7 +1,7 @@
 # Projeto Full Stack Charged Cloud
 
 ## Descrição
-- Este projeto tem o objetivo de demonstrar minhas habilidades e conheicmentos em Desenvolvimento Web Full-Stack.
+- Este projeto tem o objetivo de demonstrar minhas habilidades e conhecimentos em Desenvolvimento Web Full-Stack.
 - A aplicação tem sua base em utilizar Nest.js (Backend), Vite (Frontend) e Mysql (Banco de dados).
 
 ## Checklist de Tarefas
@@ -40,7 +40,7 @@
 ![select](./assetsforread/select.png)
 ![newproject](./assetsforread/newProject.png)
 
-3. Agora preencha os campos abaixo e clique em `Create`.
+3. Agora preencha os campos abaixo e clique em `Criar`.
 ![fields](./assetsforread/fields.png)
 
 4. Confirmando, você irá ser redirecionado para outra página, onde ira aparecer uma notificação que foi realizado com sucesso a criação de seu projeto e para você selecionar este.
@@ -53,7 +53,7 @@
 
 7. Na área Tipo de usuário, selecione o seu tipo de usuário, sendo interno para uma organização e externo para testes. Após selecionar clique em `Criar`.
 
-8. Na árae de Informações do aplicativo preencha os campos obrigatorios, como nome do aplicativo, email para suporte do usuário (seu email), e na área de dados de contato do desenvolvedor novamente coloque seu email.
+8. Na área de Informações do aplicativo preencha os campos obrigatorios, como nome do aplicativo, email para suporte do usuário (seu email), e na área de dados de contato do desenvolvedor novamente coloque seu email.
 
 9. Prosseguindo para escopos selecione `Adicionar ou Remover Escopos` e marque `.../auth/userinfo.email` e `.../auth/userinfo.profile` estas duas caixas (Você pode marcar outras de acordo com sua aplicação e necessidade).
 
@@ -72,11 +72,11 @@
 
 2. Após fazer o download do projeto, entre nos diretórios frontend e backend e rode o comando npm install para instalar as dependências do projeto.
 
-3. Configure as variáveis de ambiente no arquivo .env disponível no diretório backend, de acordo com seu serviço Google. Também configure a DATABASE_URL de acordo com seu banco de dados, como o exemplo abaixo: mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public.
+3. Configure as variáveis de ambiente no arquivo .env disponível no diretório backend, de acordo com seu serviço Google. Também configure a `DATABASE_URL` de acordo com seu banco de dados, como o exemplo abaixo: `mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public`.
 
-4. Após configurar, execute o comando npx prisma migrate dev para realizar as migrações no seu banco de dados, criando as tabelas e definindo a estrutura.
+4. Após configurar, execute o comando `npx prisma migrate dev` para realizar as migrações no seu banco de dados, criando as tabelas e definindo a estrutura.
 
-5. Agora, no frontend, rode o comando npm run dev para iniciar a aplicação frontend. Em seguida, no backend, rode npm run start:dev para iniciar a aplicação backend.
+5. Agora, no frontend, rode o comando `npm run dev` para iniciar a aplicação frontend. Em seguida, no backend, rode `npm run start:dev` para iniciar a aplicação backend.
 
 6. Aproveite a experiência.
 
@@ -84,7 +84,7 @@
 Certifique-se de configurar as variáveis de ambiente no backend. Um exemplo de configuração:
 
 ```env
-DATABASE_URL=mysql://usuario:senha@localhost:3306/chargedcloud
+DATABASE_URL=mysql://seu_usuario:sua_senha@localhost:3306/nome_do_banco_de_dados?schema=public.
 CLIENT_ID=seu_google_client_id
 CLIENT_SECRET=seu_google_client_secret
 CALLBACK_URL=sua_rota_de_redirecionamento_apos_autenticacao
