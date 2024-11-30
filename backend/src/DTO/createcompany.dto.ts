@@ -1,5 +1,7 @@
 import { IsEmail, IsNotEmpty, IsOptional, IsString, Matches } from "class-validator"
 
+
+
 export class CreateCompanyDTO{
     @IsNotEmpty()
     @IsString()

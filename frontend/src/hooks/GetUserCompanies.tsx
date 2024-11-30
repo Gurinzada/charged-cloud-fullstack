@@ -1,23 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import api from "../services/api"
-
-type company = {
-    address:string,
-    category:string,
-    cnpj:string,
-    email:string,
-    name:string,
-    description:string | null,
-    userid:number,
-    website:string | null
-    id:number
-}
-
+import {CompanyProps} from '../services/companyType';
 
 export default function GetUserCompanies(){
-    const [companies, setCompanies] = useState<company[] | null>(null)
-    const [reload, setReload] = useState<boolean>(false)
+    const [companies, setCompanies] = useState<CompanyProps[] | null>(null)
     const navigate = useNavigate()
 
     const handleUserCompanies = async () => {
@@ -37,5 +24,5 @@ export default function GetUserCompanies(){
             }
     }
 
-    return {companies, handleUserCompanies, setReload, reload}
+    return {companies, handleUserCompanies}
 }

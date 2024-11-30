@@ -5,14 +5,16 @@ import container from "../styles/container.module.scss"
 import GetUserCompanies from "../hooks/GetUserCompanies";
 import Card from "../components/Card";
 import styles from "../styles/client.module.scss"
+import { ToastContainer } from "react-toastify";
 
 export default function Client(){
     const {mode} = useMode()
-    const {companies, handleUserCompanies, reload} = GetUserCompanies()
+    const {companies, handleUserCompanies} = GetUserCompanies()
 
     useEffect(() => {
          handleUserCompanies()
-    },[reload])
+    },[])
+
 
     return(
         <div className={`${container.Container} ${mode ? `${container.darkmode}` : `${container.lightmode}`}`}>
@@ -26,6 +28,7 @@ export default function Client(){
                     <Card address={item.address} category={item.category} cnpj={item.cnpj} description={item.description || "Descrição não Fornecida!"} email={item.email} name={item.name} website={item.website || "WebSite não Fornecido!"} id={item.id}/>
                 )) : null}
                </section>
+               <ToastContainer/>
             </main>
         </div>
     )

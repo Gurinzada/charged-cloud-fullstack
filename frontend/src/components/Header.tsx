@@ -50,11 +50,11 @@ export default function Header(){
                 <div>
                     <Link className={styles.Link} to={"/createcompany"}>Cadastrar empresa</Link>
                 </div>
-                <picture onClick={handleLogout}>
-                    <LogoutIcon className={styles.IteractiveIcon} sx={{color:"#d40047", cursor:'pointer'}}/>
-                </picture>
                 <picture>
                     <AccountBoxIcon className={styles.IteractiveIcon} sx={{color:"#d40047", cursor:'pointer'}}/>
+                </picture>
+                <picture onClick={handleLogout}>
+                    <LogoutIcon className={styles.IteractiveIcon} sx={{color:"#d40047", cursor:'pointer'}}/>
                 </picture>
             </nav>
         </header>
