@@ -21,6 +21,6 @@ export class AuthController {
 
     const token = jwt.sign({googleId, userid: req.user.id }, process.env.SECRET, {expiresIn: 86400})
 
-    res.redirect(`http://localhost:5173/loading?userid=${token}`)
+    res.redirect(`http://localhost:5173/?userid=${token}`)
   }
 }

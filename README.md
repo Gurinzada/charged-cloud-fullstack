@@ -13,19 +13,19 @@
 - [X] CRUD de Empresas.
 - [X] Desenvolver uma API RESTful utilizando Nest.js
 - [X] Implementar endpoints para as operações de criação, leitura, atualização e exclusão de empresas.
-- [x] Conectar a API a um banco de dados MySQL para persistência dos dados.
+- [X] Conectar a API a um banco de dados MySQL para persistência dos dados.
 
 2. Frontend
 - [X] Utilizar Vite como ferramenta de build para o projeto frontend.
 - [X] Login com autenticação via Google
 - [X] Visualização da lista de empresas.
-- [ ] Formulários para criação e edição de empresas.
-- [ ] Funcionalidade para exclusão de empresas.
+- [X] Formulários para criação e edição de empresas.
+- [X] Funcionalidade para exclusão de empresas.
 - [X] Garantir uma interface responsiva e amigável ao usuário.
 
 3. Banco de Dados
 - [X] Modelar a tabela de empresas com campos relevantes (exemplo: ID, nome, endereço, telefone, etc.).
-- [ ] Utilizar práticas adequadas de modelagem e normalização.
+- [X] Utilizar práticas adequadas de modelagem e normalização.
 
 
 
