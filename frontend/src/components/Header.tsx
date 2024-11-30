@@ -12,7 +12,11 @@ export default function Header(){
     const navigate = useNavigate()
 
     useEffect(() => {
-       handleUserInfos()
+        const callUser = async() => {
+          await  handleUserInfos()
+        }
+
+        callUser()
     },[])
 
     const handleLogout = async () => {
@@ -34,6 +38,10 @@ export default function Header(){
             return navigate(0)
         }
     }
+
+    const handleProfile = () => {
+        navigate('/profile')
+    }
     
     return(
         <header className={styles.Header}>
@@ -50,7 +58,7 @@ export default function Header(){
                 <div>
                     <Link className={styles.Link} to={"/createcompany"}>Cadastrar empresa</Link>
                 </div>
-                <picture>
+                <picture onClick={handleProfile}>
                     <AccountBoxIcon className={styles.IteractiveIcon} sx={{color:"#d40047", cursor:'pointer'}}/>
                 </picture>
                 <picture onClick={handleLogout}>

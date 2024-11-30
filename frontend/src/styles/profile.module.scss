@@ -1,0 +1,155 @@
+.MainArea{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.ProfileCard{
+    background-color: #fff;
+    border-radius: 8px;
+    border: 0.1px solid #efefefef;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+}
+
+.ProfileInfos{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+.MyPhoto{
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.InfosContainer{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.Data{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.FieldInfos{
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.Infos{
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.Title{
+    color: #000;
+    font-size: 1.95rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.AreaCompany{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.25rem;
+}
+
+.Circle{
+    align-items: center;
+    border-radius: 50%;
+    background-color: #437de7;
+    display: flex;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
+}
+
+.NumberCompany{
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+.Subtitle{
+    align-items: center;
+    color: #000;
+    display: flex;
+    font-size: 1.55rem;
+    font-weight: 700;
+    justify-content: center;
+}
+
+.borderForBottom{
+    border-bottom: 1px solid #d40047;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .ProfileCard{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ProfileCard{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ProfileCard{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .Title{
+        font-size: 1.2rem;
+    }
+    .Subtitle{
+        font-size: 1.1rem;
+    }
+    .FieldInfos{
+        font-size: 0.9rem;
+    }
+    .Infos{
+        font-size: 0.8rem;
+    }
+    .Circle{
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+    .NumberCompany{
+        font-size: 1rem;
+    }
+}

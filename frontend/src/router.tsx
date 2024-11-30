@@ -5,6 +5,7 @@ import Client from "./pages/Client";
 import PrivateRoute from "./hooks/PrivateRoute";
 import Company from "./pages/Company";
 import UpdateCompany from "./pages/UpdateCompany";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path:"/updatecompany/:id",
         element: <ModeContextProvider><PrivateRoute><UpdateCompany/></PrivateRoute></ModeContextProvider>
+    },
+    {
+        path: "/profile",
+        element: <ModeContextProvider><PrivateRoute><Profile/></PrivateRoute></ModeContextProvider>
     }
 ])
 

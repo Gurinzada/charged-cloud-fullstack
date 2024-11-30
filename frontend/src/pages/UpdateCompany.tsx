@@ -55,7 +55,7 @@ export default function UpdateCompany(){
             }
         }
         getTheCompany()
-    },[])
+    },[id])
 
     const handleUpdate = async(e:React.FormEvent) => {
         e.preventDefault()
