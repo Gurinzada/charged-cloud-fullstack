@@ -21,16 +21,3 @@
     transform: translateY(0);
    }
 }
-
-@keyframes deleted {
-    0%{
-        transform: translateY(0) rotateZ(0deg);
-    }
-    50%{
-        transform: translateY(10vh) rotateZ(45deg);
-    }
-    100%{
-        transform: translateY(15vh) rotateZ(90deg);
-        opacity: 0;
-    }
-}

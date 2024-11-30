@@ -1,10 +1,11 @@
-@import './animation.scss';
+@use './animation.scss';
+@use "./color.scss" as color;
 
 .ContainerCards{
     align-items: flex-start;
-    border: 1px solid #d40047;
+    border: 1px solid color.$PinkColor;
     border-radius: 6px;
-    background-color: #1b1b1d;
+    background-color: color.$blackBackground;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     display: flex;
     flex-direction: column;
@@ -20,7 +21,7 @@
 }
 
 .HeaderCard, .AreaInfos{
-    border-bottom: 1px solid #d40047;
+    border-bottom: 1px solid color.$PinkColor;
     width: 100%;
 }
 
@@ -59,12 +60,12 @@
 }
 
 .Infos, .TextOption{
-    color: #efefef;
+    color: color.$ghostColor;
     padding-left: 0.3rem;
 }
 
 .AtributeInfo{
-    color: #437de7;
+    color: color.$blueColor;
     font-weight: 600;
     font-size: 0.95rem;
 }

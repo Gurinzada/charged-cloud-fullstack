@@ -1,3 +1,5 @@
+@use "./color.scss" as color;
+
 .Header{
     align-items: center;
     background-color: #1b1b1d;
@@ -22,7 +24,7 @@
 }
 
 .Link{
-    color: #437de7;
+    color: color.$blueColor;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
@@ -45,7 +47,7 @@
 }
 
 .Title{
-    color: #437de7;
+    color: color.$blueColor;
     font-size: 1.8rem;
     text-align: center;
 }
