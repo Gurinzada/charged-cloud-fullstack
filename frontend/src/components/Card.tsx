@@ -45,7 +45,7 @@ export default function Card({name, email, cnpj, address, category, description,
                         transition: Bounce,
                     })
                     setTimeout(() => {
-                        navigate("/client")
+                        navigate(0)
                     },2000)
                 }
         } catch {
@@ -61,7 +61,7 @@ export default function Card({name, email, cnpj, address, category, description,
                 transition: Bounce,
             });
             setTimeout(() => {
-                navigate("/client")
+                navigate(0)
             },5000)
         }
     }
