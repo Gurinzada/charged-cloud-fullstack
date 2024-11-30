@@ -28,28 +28,6 @@
 - [X] Utilizar práticas adequadas de modelagem e normalização.
 
 
-
-
-## Imagens Aplicação
-1. Tela de Login e Cadastro
-![authScreen](./assetsforread/authScreen.png)
-
-2. Tela do Cliente
-![screenClient](./assetsforread/whiteClientMode.png)
-![screenBlackClient](./assetsforread/clientScreenBlackMode.png)
-
-3. Formulário de cadastrar empresa
-![screenWhite](./assetsforread/whiteCreateCompany.png)
-![screenCreate](./assetsforread/createCompanyScreen.png)
-
-4. Formulário de atualizar empresa
-![screenWhiteUpdate](./assetsforread/whiteScreenUpdate.png)
-![screnBlackUpdate](./assetsforread/updateScreen.png)
-
-5. Tela Perfil usuário
-![screenUser](./assetsforread/whiteProfile.png)
-![screenBlackUser](./assetsforread/profileScreen.png)
-
 ## Como utilizar o serviço do Google
 1. Acesse o link `https://console.cloud.google.com` e esteja logado com sua conta Google.
 
@@ -132,6 +110,28 @@ SECRET="sua_chave_secreta"
 - **JWT**: Autenticação stateless para APIs RESTful.
 - **Passport.js**: Middleware para autenticação, incluindo OAuth 2.0.
 - **class-validator**: Biblioteca para validação de dados no backend.
+
+## Imagens Aplicação
+1. Tela de Login e Cadastro
+![authScreen](./assetsforread/authScreen.png)
+
+2. Tela do Cliente
+![screenClient](./assetsforread/whiteClientMode.png)
+![screenBlackClient](./assetsforread/clientScreenBlackMode.png)
+
+3. Formulário de cadastrar empresa
+![screenWhite](./assetsforread/whiteCreateCompany.png)
+![screenCreate](./assetsforread/createCompanyScreen.png)
+
+4. Formulário de atualizar empresa
+![screenWhiteUpdate](./assetsforread/whiteScreenUpdate.png)
+![screnBlackUpdate](./assetsforread/updateScreen.png)
+
+5. Tela Perfil usuário
+![screenUser](./assetsforread/whiteProfile.png)
+![screenBlackUser](./assetsforread/profileScreen.png)
+
+
 
 ## Autor
 - Augusto Mariano
