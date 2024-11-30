@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, Param, Patch, Post, Req, Res } from "@nestjs/common";
+import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, Param, Patch, Post, Req } from "@nestjs/common";
 import { Request } from "express";
 import { CreateCompanyDTO } from "src/DTO/createcompany.dto";
 import CompanyService from "src/services/company.service";
