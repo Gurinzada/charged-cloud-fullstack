@@ -31,7 +31,6 @@ export default function Profile(){
     useEffect(() => {
         const handleLastProject = () => {
             if(companies !== null){
-                console.log(companies)
                 const lengthCompany = (companies.length - 1)
                 setLastProject(() => companies[lengthCompany])
     
