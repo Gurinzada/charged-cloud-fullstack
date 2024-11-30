@@ -75,7 +75,7 @@ export default function Profile(){
                                 <h1 className={styles.Title}>Última empresa cadastrada</h1>
                             </div>
                             <div>
-                                {lastProject ? <Card {...lastProject} description={lastProject.description === "" ? "Descrição não Fornecida!" : lastProject.description} website={lastProject.website === "" ? "WebSite não Fornecido!" : lastProject.website}/> : <p>Erro ao carregar</p>}
+                                {lastProject ? <Card {...lastProject} description={lastProject.description === "" ? "Descrição não Fornecida!" : lastProject.description} website={lastProject.website === "" ? "WebSite não Fornecido!" : lastProject.website}/> : <p>Nenhum projeto cadastrado</p>}
                             </div>
                         </div>
                     </section>
