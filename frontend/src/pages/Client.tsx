@@ -25,7 +25,7 @@ export default function Client(){
                 </div>
                <section className={styles.SectionCards}>
                 {companies && companies.length > 0 ? companies.map((item) => (
-                    <Card address={item.address} category={item.category} cnpj={item.cnpj} description={item.description || "Descrição não Fornecida!"} email={item.email} name={item.name} website={item.website || "WebSite não Fornecido!"} id={item.id}/>
+                    <Card address={item.address} category={item.category} cnpj={item.cnpj} description={item.description === "" ? "Descrição não Fornecida!" : item.description} email={item.email} name={item.name} website={item.website === "" ? "WebSite não Fornecido!" : item.website } id={item.id}/>
                 )) : null}
                </section>
                <ToastContainer/>

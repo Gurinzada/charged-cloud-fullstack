@@ -1,0 +1,103 @@
+@import "./animation.scss";
+
+.MainForm{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    min-height: 100vh;
+    place-items: center;
+    place-content: start center;
+}
+
+.ComapnyForm{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: center;
+}
+
+.AreaInput, .AreaSelect{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    justify-content: center;
+}
+
+.Label{
+    padding-left: 0.1rem;
+  }
+  
+.TitleForm{
+    text-align: center;
+}
+  
+.AreaBnt{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  
+.Bnt{
+    background-color: #d40047;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #efefef;
+    height: 1.4rem;
+    width: 15rem;
+}
+
+.CardArea{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+    
+.Anime{
+    animation: BntAnimation 1s forwards ease;
+}
+
+  @media (max-width:768px) {
+    .MainForm{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    .ComapnyForm{
+        border-bottom: 1px solid #d40047;
+        padding: 1rem;
+        width: 90%;
+    }
+  }
+  
+@media (max-width: 425px) {
+    .Bnt{
+      width: 5rem;
+    }
+    .Label{
+      font-size: 0.75rem;
+    }
+    .TitleForm{
+      font-size: 1.4rem;
+    }
+  }
+  
+@media (max-width: 375px) {
+    .AreaBnt{
+      justify-content: center;
+    }
+    .Label{
+      font-size: 0.65rem;
+    }
+    .SelectArea{
+      font-size: 0.65rem;
+    }
+    .TitleForm{
+      font-size: 1.2rem;
+    }
+  }

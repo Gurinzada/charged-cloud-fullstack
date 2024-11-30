@@ -4,12 +4,11 @@ import container from "../styles/container.module.scss"
 import styles from "../styles/updatecompany.module.scss"
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { Bounce, toast, ToastContainer } from "react-toastify";
 import useCnpj from "../hooks/useCnpj";
 import api from "../services/api";
 import {CompanyProps} from "../services/companyType"
 import Card from "../components/Card";
-import { error } from "console";
 
 export default function UpdateCompany(){
     const {mode} = useMode()
@@ -21,7 +20,7 @@ export default function UpdateCompany(){
     const [category, setCategory] = useState<string>("")
     const [website, setWebsite] = useState<string>("")
     const [company, setCompany] = useState<CompanyProps | null>(null)
-    const {cnpj, handleCnpjChange} = useCnpj()
+    const {cnpj, handleCnpjChange, setCnpj, cnpjError} = useCnpj()
     const {id} = useParams()
     const navigate = useNavigate()
 
@@ -30,27 +29,111 @@ export default function UpdateCompany(){
             const token = localStorage.getItem('token')
             if(!token) return navigate(0)
             try {
-                const response = await api.get(`/${id}`, {
+                const response = await api.get(`/companies/${id}`, {
                     headers:{
                         "Authorization": `Bearer ${token}`,
                         "Content-Type": "Application/json"
                     }
                 })
-                if(response.status === 200){
+                if(response.status === 200 && response.data){
                     setCompany(() => response.data)
+                } else{
+                    navigate('/client')
                 }
             } catch {
-                console.log(error)
+                toast.warn("Faça login novamente!", {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Bounce,
+                });
             }
         }
         getTheCompany()
     },[])
 
+    const handleUpdate = async(e:React.FormEvent) => {
+        e.preventDefault()
+        setBnt(true)
+        setTimeout(() => {
+            setBnt(false)
+        },1000)
+        if (cnpjError) {
+            return toast.warn("Erro: verifique o CNPJ antes de enviar!", {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+        }
+        try {
+            const token = localStorage.getItem('token')
+        if(!token) return navigate(0)
+        const response = await api.patch(`/companies/${company?.id}`, {
+            name,
+            address,
+            email,
+            description,
+            cnpj,
+            category,
+            website
+        }, {
+            headers:{
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "Application/json"
+            }
+        })
+        setName("")
+        setEmail("")
+        setAddress("")
+        setCategory("")
+        setCnpj("")
+        setDescription("")
+        setWebsite("")
+        if(response.status === 200){
+            toast.success("Empresa Atualizada com sucesso!", {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            })
+            navigate('/client')
+        }
+        } catch {
+            return toast.error("Erro ao atualizar empresa! Tente novamente.", {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            })
+        }
+    }
+
     return(
         <div className={`${container.Container} ${mode ? `${container.darkmode}` : `${container.lightmode}`}`}>
             <Header/>
             <main className={styles.MainForm}>
-                <form className={styles.ComapnyForm} >
+                <form className={styles.ComapnyForm} onSubmit={handleUpdate}>
                     <div style={{width:"100%"}}>
                         <h1 className={styles.TitleForm}>Atualize as informações</h1>
                     </div>
@@ -93,10 +176,15 @@ export default function UpdateCompany(){
                         <button className={`${styles.Bnt} ${Bnt ? styles.Anime : null}`}>Atualizar</button>
                     </div>
                 </form>
-                <div>
-                    {/* {company !== null ?
-                        <Card {...company}/>
-                    : null} */}
+                <div className={styles.CardArea}>
+                    <div>
+                        <h1 className={styles.TitleForm}>Informações Anteriores</h1>
+                    </div>
+                    {company !== null ?
+                       <div>
+                            <Card {...company} description={company.description === "" ? "Descrição não Fornecida!" : company.description} website={company.website === "" ? "WebSite não Fornecido!" : company.website}/>
+                       </div>
+                    : null}
                 </div>
             </main>
             <ToastContainer />

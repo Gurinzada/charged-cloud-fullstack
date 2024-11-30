@@ -2,8 +2,9 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     gap: 2.5rem;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .SectionCards{
@@ -12,7 +13,7 @@
     flex-wrap: wrap;
     gap: 2.5rem;
     justify-content: flex-start;
-    padding: 2rem 0rem 2rem 6rem;
+    padding: 2rem 0rem 2rem 2rem;
 }
 
 @media (max-width:1440px) {

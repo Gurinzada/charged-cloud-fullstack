@@ -77,8 +77,7 @@ export default function Company(){
                 transition: Bounce,
             })
         }
-        } catch (error) {
-            console.log(error)
+        } catch {
             return toast.error("Erro ao cadastrar empresa! Tente novamente.", {
                 position: "bottom-right",
                 autoClose: 5000,

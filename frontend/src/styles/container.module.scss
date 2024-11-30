@@ -4,7 +4,7 @@
     animation: goInScreen 2s forwards ease;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 5.5rem;
     transition: background-color 0.5s ease, color 0.5s ease;
     &.darkmode {
       background-color: #303030;
