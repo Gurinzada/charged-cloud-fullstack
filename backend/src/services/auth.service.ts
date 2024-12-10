@@ -8,14 +8,13 @@ export class AuthService {
   async validateUser(profile: any) {
     const { id, displayName, emails, photos } = profile;
     const email = emails[0]?.value;
-    const photoUrl = photos[0].value
+    const photoUrl = photos[0].value;
 
-    let user = await this.prisma.user.findUnique(
-        { 
-            where: { 
-                googleId: id 
-            } 
-        });
+    let user = await this.prisma.user.findUnique({
+      where: {
+        googleId: id,
+      },
+    });
 
     if (!user) {
       // Cria um novo usuário se não existir

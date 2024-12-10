@@ -1,9 +1,9 @@
 import { Controller, Get, Req, Res, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { Response } from 'express';
-import * as jwt from "jsonwebtoken"
-import * as dotenv from "dotenv"
-dotenv.config()
+import * as jwt from 'jsonwebtoken';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 @Controller('/auth/')
 export class AuthController {
@@ -15,12 +15,16 @@ export class AuthController {
 
   @Get('google/callback')
   @UseGuards(AuthGuard('google'))
-  googleCallback(@Req() req, @Res() res:Response) {
+  googleCallback(@Req() req, @Res() res: Response) {
     // Retorna o usuário autenticado
-    const googleId = req.user.googleId
+    const googleId = req.user.googleId;
 
-    const token = jwt.sign({googleId, userid: req.user.id }, process.env.SECRET, {expiresIn: 86400})
+    const token = jwt.sign(
+      { googleId, userid: req.user.id },
+      process.env.SECRET,
+      { expiresIn: 86400 },
+    );
 
-    res.redirect(`http://localhost:5173/?userid=${token}`)
+    res.redirect(`http://localhost:5173/?userid=${token}`);
   }
 }
