@@ -50,7 +50,7 @@
 
 8. Na área de Informações do aplicativo preencha os campos obrigatorios, como nome do aplicativo, email para suporte do usuário (seu email), e na área de dados de contato do desenvolvedor novamente coloque seu email.
 
-9. Prosseguindo para escopos selecione `Adicionar ou Remover Escopos` e marque `.../auth/userinfo.email` e `.../auth/userinfo.profile` estas duas caixas (Você pode marcar outras de acordo com sua aplicação e necessidade).
+9. Prosseguindo para escopos selecione `Adicionar ou Remover Escopos` e marque `.../auth/userinfo.email` e `.../auth/userinfo.profile`, estas duas caixas (Você pode marcar outras de acordo com sua aplicação e necessidade).
 
 10. Na parte de usuário de testes, é opcional adicionar seu email. Assim pode avançar e no final clicar `Voltar ao painel`.
 
